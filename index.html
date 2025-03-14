@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elon Musk - Biografia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script>
+        // Configuração do Tailwind para suportar dark mode
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5D5CDE',
+                    }
+                }
+            }
+        }
+
+        // Detectar preferência de cor
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            if (event.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-300">
+    <header class="container mx-auto px-4 pt-10 pb-6 text-center max-w-4xl">
+        <img src="https://ichef.bbci.co.uk/images/ic/512xn/p0kl1knw.jpg.webp" alt="Elon Musk" class="rounded-full w-40 h-40 object-cover mx-auto mb-4 border-4 border-primary">
+        <p class="text-lg text-primary font-medium">Empreendedor e Visionário</p>
+        <h1 class="text-4xl font-bold my-3">Elon Musk</h1>
+        <p class="text-lg mb-6">CEO e fundador de empresas inovadoras como Tesla, SpaceX, Neuralink e The Boring Company. Conhecido por seus empreendimentos revolucionários em diversas áreas, desde veículos elétricos e energia sustentável até exploração espacial e interfaces cérebro-computador.</p>
+        <p class="font-semibold text-xl mb-3">Habilidades</p>
+        <div class="flex flex-wrap justify-center gap-2 mb-6">
+            <span class="px-3 py-1 bg-primary rounded-full text-white">Empreendedorismo</span>
+            <span class="px-3 py-1 bg-primary rounded-full text-white">Engenharia</span>
+            <span class="px-3 py-1 bg-primary rounded-full text-white">Inovação</span>
+            <span class="px-3 py-1 bg-primary rounded-full text-white">Liderança</span>
+            <span class="px-3 py-1 bg-primary rounded-full text-white">Visão Futurista</span>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 max-w-6xl">
+        <h2 class="text-3xl font-bold mb-8 text-center">Biografia</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Seção 1 - Primeiros Anos -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all hover:shadow-xl">
+                <img src="https://akns-images.eonline.com/eol_images/Entire_Site/202379/cr_1200x1200-230809142536-GettyImages-1463186805.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top" class="w-full h-64 object-cover" alt="Elon Musk na juventude">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-3">Primeiros Anos e Educação</h5>
+                    <p class="mb-4">
+                        Nascido em 28 de junho de 1971 em Pretória, África do Sul. Desde cedo, demonstrou interesse por tecnologia e empreendedorismo, criando seu primeiro software comercial aos 12 anos. Mudou-se para o Canadá aos 17 anos e posteriormente cursou Física e Economia na Universidade da Pensilvânia.
+                    </p>
+                    <button type="button" class="text-primary font-medium hover:underline" onclick="openModal('modal1')">
+                        Saiba mais
+                    </button>
+                </div>
+            </div>
+
+            <!-- Seção 2 - Carreira Empresarial -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all hover:shadow-xl">
+                <img src="https://i.imgur.com/dAekBdc.jpeg" class="w-full h-64 object-cover" alt="Elon Musk com foguete SpaceX">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-3">Carreira Empresarial</h5>
+                    <p class="mb-4">
+                        Fundou a Zip2 em 1995, vendida para Compaq por US$307 milhões. Co-fundou a X.com (futura PayPal) em 1999, vendida para eBay por US$1,5 bilhão. Em 2002, fundou a SpaceX com o objetivo de reduzir custos de transporte espacial e possibilitar a colonização de Marte.
+                    </p>
+                    <button type="button" class="text-primary font-medium hover:underline" onclick="openModal('modal2')">
+                        Saiba mais
+                    </button>
+                </div>
+            </div>
+
+            <!-- Seção 3 - Empresas Atuais -->
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all hover:shadow-xl">
+                <img src="https://i.imgur.com/dN4aGgx.png" class="w-full h-64 object-cover" alt="Tesla Model S">
+                <div class="p-6">
+                    <h5 class="text-xl font-bold mb-3">Empresas e Projetos Atuais</h5>
+                    <p class="mb-4">
+                        CEO da Tesla desde 2008, transformando-a na maior fabricante de veículos elétricos do mundo. A SpaceX revolucionou o setor aeroespacial com foguetes reutilizáveis. Também lidera a Neuralink (interfaces cérebro-computador), The Boring Company (túneis) e recentemente adquiriu o Twitter.
+                    </p>
+                    <button type="button" class="text-primary font-medium hover:underline" onclick="openModal('modal3')">
+                        Saiba mais
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal 1 -->
+    <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6 border-b dark:border-gray-700">
+                <div class="flex justify-between items-center">
+                    <h5 class="text-xl font-bold">Primeiros Anos e Educação</h5>
+                    <button type="button" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" onclick="closeModal('modal1')">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Elon Reeve Musk nasceu em 28 de junho de 1971, em Pretória, África do Sul. Filho de Maye Musk, modelo e nutricionista canadense, e Errol Musk, engenheiro eletromecânico sul-africano. Desde pequeno, Elon era um ávido leitor e demonstrava fascínio por computadores e tecnologia.</p>
+                
+                <p class="mb-4">Aos 10 anos, ganhou seu primeiro computador e aprendeu programação de forma autodidata. Aos 12 anos, criou e vendeu seu primeiro software, um jogo chamado Blastar, por aproximadamente US$ 500. Durante sua infância, Elon enfrentou bullying na escola e teve um relacionamento complicado com seu pai.</p>
+                
+                <p class="mb-4">Aos 17 anos, mudou-se para o Canadá para evitar o serviço militar obrigatório na África do Sul e para buscar melhores oportunidades. Frequentou a Queen's University em Kingston, Ontário, por dois anos, antes de se transferir para a Universidade da Pensilvânia, onde obteve bacharelados em Física e Economia.</p>
+                
+                <p class="mb-4">Após a graduação, Musk ingressou no programa de doutorado em Física Aplicada e Ciência dos Materiais na Universidade Stanford, mas abandonou o curso após apenas dois dias para perseguir suas ambições empreendedoras durante o boom da internet nos anos 90.</p>
+                
+                <img src="https://i.imgur.com/vT2OaXp.jpg" alt="Elon Musk jovem" class="w-full rounded-lg my-4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6 border-b dark:border-gray-700">
+                <div class="flex justify-between items-center">
+                    <h5 class="text-xl font-bold">Carreira Empresarial</h5>
+                    <button type="button" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" onclick="closeModal('modal2')">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">A jornada empreendedora de Elon Musk começou em 1995, quando fundou a Zip2 com seu irmão Kimbal. A empresa fornecia conteúdo para novos sites de empresas de mídia, incluindo mapas e diretórios de negócios. Em 1999, a Compaq adquiriu a Zip2 por US$ 307 milhões, com Musk recebendo US$ 22 milhões por sua participação de 7%.</p>
+                
+                <p class="mb-4">Em março de 1999, Musk co-fundou a X.com, uma empresa de serviços financeiros e pagamentos online. Um ano depois, a X.com se fundiu com a Confinity, que tinha um serviço de transferência de dinheiro chamado PayPal. Musk foi substituído como CEO em outubro de 2000, mas continuou como membro do conselho. Em 2001, a X.com foi renomeada para PayPal, e em 2002, a PayPal foi adquirida pelo eBay por US$ 1,5 bilhão em ações, com Musk recebendo US$ 175,8 milhões.</p>
+                
+                <p class="mb-4">Em 2002, Musk fundou a SpaceX (Space Exploration Technologies Corp.) com o objetivo de reduzir os custos de transporte espacial e permitir a colonização de Marte. A SpaceX desenvolveu vários veículos de lançamento e a espaçonave Dragon. Em 2008, a SpaceX garantiu um contrato da NASA para transportar carga para a Estação Espacial Internacional, e posteriormente, em 2020, a SpaceX se tornou a primeira empresa privada a enviar astronautas para a ISS.</p>
+                
+                <p class="mb-4">Em 2004, Musk juntou-se à Tesla Motors (agora Tesla, Inc.) como investidor-anjo e presidente do conselho, assumindo um papel ativo no desenvolvimento do primeiro carro da empresa, o Tesla Roadster. Em 2008, Musk assumiu como CEO da Tesla, posição que mantém até hoje, transformando a empresa em uma das mais valiosas do mundo.</p>
+                
+                <img src="https://i.imgur.com/s1RMOQM.jpg" alt="SpaceX Falcon Heavy" class="w-full rounded-lg my-4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white dark:bg-gray-800 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6 border-b dark:border-gray-700">
+                <div class="flex justify-between items-center">
+                    <h5 class="text-xl font-bold">Empresas e Projetos Atuais</h5>
+                    <button type="button" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" onclick="closeModal('modal3')">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="p-6">
+                <p class="mb-4">Atualmente, Elon Musk lidera várias empresas revolucionárias em diferentes setores:</p>
+                
+                <p class="mb-4"><strong>Tesla, Inc.</strong>: Como CEO, Musk tem liderado a transformação da indústria automotiva global. A Tesla não é apenas a fabricante de veículos elétricos mais valiosa do mundo, mas também um líder em energia sustentável, oferecendo produtos como painéis solares e sistemas de armazenamento de energia. Os veículos da Tesla, incluindo o Model S, Model 3, Model X e Model Y, têm sido pioneiros em tecnologias como direção autônoma.</p>
+                
+                <p class="mb-4"><strong>SpaceX</strong>: A empresa continua a fazer história na exploração espacial. Desenvolveu os foguetes Falcon 9 parcialmente reutilizáveis e o Falcon Heavy, reduzindo significativamente o custo de lançamentos espaciais. A Starship, próximo grande projeto da SpaceX, visa ser um sistema de transporte totalmente reutilizável capaz de levar humanos a Marte. Além disso, o projeto Starlink da SpaceX está construindo uma constelação de satélites para fornecer internet de alta velocidade globalmente.</p>
+                
+                <p class="mb-4"><strong>Neuralink</strong>: Fundada em 2016, a Neuralink está desenvolvendo interfaces cérebro-máquina implantáveis. O objetivo é ajudar pessoas com condições neurológicas e, eventualmente, permitir uma simbiose entre humanos e inteligência artificial.</p>
+                
+                <p class="mb-4"><strong>The Boring Company</strong>: Criada em 2016, esta empresa visa revolucionar o transporte urbano construindo túneis para reduzir o congestionamento nas cidades.</p>
+                
+                <p class="mb-4"><strong>X</strong> (anteriormente Twitter): Em 2022, Musk adquiriu a plataforma de mídia social por aproximadamente US$ 44 bilhões, implementando mudanças significativas na empresa e na plataforma.</p>
+                
+                <img src="https://i.imgur.com/CjIbMzB.jpg" alt="Tesla Model S" class="w-full rounded-lg my-4">
+            </div>
+        </div>
+    </div>
+
+    <footer class="container mx-auto px-4 py-10 mt-10 border-t dark:border-gray-800">
+        <h2 class="text-2xl font-bold mb-6 text-center">Entre em contato</h2>
+        <div class="flex justify-center gap-6 mb-10">
+            <a href="https://twitter.com/elonmusk" target="_blank" class="flex items-center gap-2 text-primary hover:underline">
+                <i class="bi bi-twitter-x"></i>
+                Twitter/X
+            </a>
+            <a href="https://www.tesla.com" target="_blank" class="flex items-center gap-2 text-primary hover:underline">
+                <i class="bi bi-lightning-charge-fill"></i>
+                Tesla
+            </a>
+            <a href="https://www.spacex.com" target="_blank" class="flex items-center gap-2 text-primary hover:underline">
+                <i class="bi bi-rocket-takeoff-fill"></i>
+                SpaceX
+            </a>
+        </div>
+        <p class="text-center text-sm text-gray-600 dark:text-gray-400">© 2024. Esta é uma página de demonstração com fins educativos.</p>
+    </footer>
+
+    <!-- Botão de alternância de tema -->
+    <button id="theme-toggle" class="fixed top-4 right-4 z-40 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 transition-all hover:bg-gray-300 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary">
+        <svg id="sun-icon" class="w-6 h-6 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="moon-icon" class="w-6 h-6 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fechar modal ao clicar fora dele
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('[id^="modal"]');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Funcionalidade para alternar entre o modo claro e escuro
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            // Alterna a classe dark no elemento html
+            document.documentElement.classList.toggle('dark');
+        });
+    </script>
+</body>
+
+</html>
